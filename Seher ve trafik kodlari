@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int num , kod , end = 0;
+    char seher[255] ; 
+   FILE *file = fopen("seherler.txt" , "r") ; 
+   if(file == NULL){
+   printf("dosya acilmadi") ; 
+   return 1; 
+   }
+   printf("numaranizi girniz: ") ; 
+   scanf("%d" , &num) ; 
+    
+   while(fscanf(file , "%d %s" ,&code , seher) != EOF ) {
+       if(num == kod) {
+           printf("%s Doğu Karadeniz bölgesinde yer alır" , seher) ; 
+           end++; 
+       }
+       else if (end == 1) 
+       break ;
+       
+   }
+   printf("Hatali kod Girdiniz");
+    fclose(file) ; 
+    return 0;
+}
